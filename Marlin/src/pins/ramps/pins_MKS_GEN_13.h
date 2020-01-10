@@ -47,12 +47,45 @@
 //
 // If PSU_CONTROL is specified, always hijack Servo 3
 //
-#if ENABLED(PSU_CONTROL)
+/*#if ENABLED(PSU_CONTROL)
   #define SERVO3_PIN       -1
   #define PS_ON_PIN         4
-#endif
+#endif*/
 
 #include "pins_RAMPS.h"
+
+/* Custom */
+#undef X_CS_PIN
+#undef Y_CS_PIN
+#undef Z_CS_PIN
+#undef E0_CS_PIN
+
+#define X_CS_PIN        59
+#define Y_CS_PIN        64
+#define Z_CS_PIN        44
+#define E0_CS_PIN       66
+
+//#undef MAX6675_SS
+//#define MAX6675_SS      57
+
+/*
+#undef BEEPER_PIN
+#define BEEPER_PIN      -1
+*/
+
+#undef PS_ON_PIN
+#define PS_ON_PIN        65
+
+#undef SERVO3_PIN
+#define SERVO3_PIN -1
+#undef CASE_LIGHT_PIN
+#define CASE_LIGHT_PIN   4
+
+#undef SERVO1_PIN
+#define SERVO1_PIN -1
+#undef CONTROLLER_FAN_PIN
+#define CONTROLLER_FAN_PIN 6
+/* Custom */
 
 //
 // LCD / Controller
