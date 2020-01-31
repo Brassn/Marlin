@@ -1,4 +1,4 @@
-Start G-Code Bilinear
+# Start G-Code Bilinear
 M104 S130 ;preheat nozzle to save time
 M190 S{material_bed_temperature_layer_0} ;wait for heated bed
 G28 ;Home
@@ -10,7 +10,7 @@ G0 X0 Y0 Z0 F2000 ;move back to Z0
 G1 X60.0 E9 F500.0 ; start purge
 G1 X100 Z0.4 E12.5 F500.0 ; finish purge line
 
-End G-Code
+# End G-Code
 G92 E0 ;set extruderposition to 0
 G1 E-6 F3000 ;retract 6mm filament
 M104 S0 ;Cool down nozzle
@@ -23,7 +23,7 @@ M84 ;shut down steppers
 M109 R50 ;wait for nozzle to cool down
 M81
 
-Start G-Code UBL
+# Start G-Code UBL
 M104 S130 ;preheat nozzle to save time
 M190 S{material_bed_temperature_layer_0} ;wait for heated bed
 G28 ;Home
