@@ -280,7 +280,10 @@
         }
       }
     }
-
+  #else
+    template<typename TMC>
+    void step_current_down(TMC &st) {
+    }
   #endif
 
   template<typename TMC>
