@@ -490,10 +490,10 @@
   //#define DEFAULT_Ki 2.25
   //#define DEFAULT_Kd 440
 
-  //04.10.2019
-  #define DEFAULT_Kp 14.28
-  #define DEFAULT_Ki 0.94
-  #define DEFAULT_Kd 54.40
+  //31.01.2020
+  #define DEFAULT_Kp 13.40
+  #define DEFAULT_Ki 0.83
+  #define DEFAULT_Kd 54.34
 #endif // PIDTEMP
 
 //===========================================================================
