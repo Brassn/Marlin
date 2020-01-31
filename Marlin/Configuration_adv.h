@@ -2228,9 +2228,6 @@
     //#define CURRENT_STEP_DOWN     50  // [mA]
     //#define REPORT_CURRENT_CHANGE
     #define STOP_ON_ERROR
-    //#if ENABLED(STOP_ON_ERROR)
-    //  #define STOP_ON_OT_WARNING
-    //#endif
   #endif
 
   /**
