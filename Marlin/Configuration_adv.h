@@ -904,7 +904,7 @@
 // @section lcd
 
 #if EITHER(ULTIPANEL, EXTENSIBLE_UI)
-  #define MANUAL_FEEDRATE { 50*60, 50*60, 4*60, 60 } // Feedrates for manual moves along X, Y, Z, E from panel
+  #define MANUAL_FEEDRATE { 50*60, 50*60, 4*60, 4*60 } // Feedrates for manual moves along X, Y, Z, E from panel
   #define SHORT_MANUAL_Z_MOVE 0.025 // (mm) Smallest manual Z move (< 0.1mm)
   #if ENABLED(ULTIPANEL)
     #define MANUAL_E_MOVES_RELATIVE // Display extruder move distance rather than "position"
@@ -1245,7 +1245,7 @@
   #define STATUS_ALT_FAN_BITMAP     // Use the alternative fan bitmap
   //#define STATUS_FAN_FRAMES 3       // :[0,1,2,3,4] Number of fan animation frames
   //#define STATUS_HEAT_PERCENT       // Show heating in a progress bar
-  //#define BOOT_MARLIN_LOGO_SMALL    // Show a smaller Marlin logo on the Boot Screen (saving 399 bytes of flash)
+  #define BOOT_MARLIN_LOGO_SMALL    // Show a smaller Marlin logo on the Boot Screen (saving 399 bytes of flash)
   //#define BOOT_MARLIN_LOGO_ANIMATED // Animated Marlin logo. Costs ~‭3260 (or ~940) bytes of PROGMEM.
 
   // Frivolous Game Options
@@ -1787,7 +1787,7 @@
  */
 #if EXTRUDERS > 1
   // Z raise distance for tool-change, as needed for some extruders
-  #define TOOLCHANGE_ZRAISE     2  // (mm)
+  //#define TOOLCHANGE_ZRAISE     2  // (mm)
   //#define TOOLCHANGE_NO_RETURN   // Never return to the previous position on tool-change
   #if ENABLED(TOOLCHANGE_NO_RETURN)
     //#define EVENT_GCODE_AFTER_TOOLCHANGE "G12X"   // G-code to run after tool-change is complete
@@ -1796,8 +1796,8 @@
   // Retract and prime filament on tool-change
   #define TOOLCHANGE_FILAMENT_SWAP
   #if ENABLED(TOOLCHANGE_FILAMENT_SWAP)
-    #define TOOLCHANGE_FIL_SWAP_LENGTH          140  // (mm)
-    #define TOOLCHANGE_FIL_EXTRA_PRIME           2  // (mm)
+    #define TOOLCHANGE_FIL_SWAP_LENGTH          100  // (mm)
+    #define TOOLCHANGE_FIL_EXTRA_PRIME           4  // (mm)
     #define TOOLCHANGE_FIL_SWAP_RETRACT_SPEED (40*60)  // (mm/m)
     #define TOOLCHANGE_FIL_SWAP_PRIME_SPEED   (40*60)  // (mm/m)
   #endif
