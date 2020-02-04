@@ -1,0 +1,17 @@
+retraction_combing = noskin
+adhesion_type = skirt
+brim_line_count = 4
+coasting_enable = True
+coasting_volume = 0.16
+optimize_wall_printing_order = True
+retraction_count_max = 150
+retraction_hop = 0.1
+retraction_hop_enabled = True
+retraction_hop_only_when_collides = True
+speed_print = 60
+skin_overlap = 10
+small_hole_max_size = 5
+
+
+retraction_speed = 50
+retraction_amount = 5
