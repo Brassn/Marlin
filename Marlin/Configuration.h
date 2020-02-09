@@ -428,11 +428,11 @@
 //#define TEMP_SENSOR_1_AS_REDUNDANT
 #define MAX_REDUNDANT_TEMP_SENSOR_DIFF 10
 
-#define TEMP_RESIDENCY_TIME     0  // (seconds) Time to wait for hotend to "settle" in M109
+#define TEMP_RESIDENCY_TIME     10  // (seconds) Time to wait for hotend to "settle" in M109
 #define TEMP_WINDOW              1  // (°C) Temperature proximity for the "temperature reached" timer
 #define TEMP_HYSTERESIS          3  // (°C) Temperature proximity considered "close enough" to the target
 
-#define TEMP_BED_RESIDENCY_TIME 0  // (seconds) Time to wait for bed to "settle" in M190
+#define TEMP_BED_RESIDENCY_TIME 10  // (seconds) Time to wait for bed to "settle" in M190
 #define TEMP_BED_WINDOW          1  // (°C) Temperature proximity for the "temperature reached" timer
 #define TEMP_BED_HYSTERESIS      3  // (°C) Temperature proximity considered "close enough" to the target
 
@@ -499,10 +499,14 @@
   //#define DEFAULT_Ki 2.25
   //#define DEFAULT_Kd 440
 
-  //31.01.2020
-  #define DEFAULT_Kp 13.40
-  #define DEFAULT_Ki 0.83
-  #define DEFAULT_Kd 54.34
+  //31.01.2020 heatblock backwards
+  //#define DEFAULT_Kp 13.40
+  //#define DEFAULT_Ki 0.83
+  //#define DEFAULT_Kd 54.34
+  //08.02.2020 heatblock right
+  #define DEFAULT_Kp 14.94
+  #define DEFAULT_Ki 0.95
+  #define DEFAULT_Kd 59.08
 #endif // PIDTEMP
 
 //===========================================================================
@@ -951,7 +955,7 @@
  *
  * Specify a Probe position as { X, Y, Z }
  */
-#define NOZZLE_TO_PROBE_OFFSET { 24, 10, -1.50 }
+#define NOZZLE_TO_PROBE_OFFSET { 24, 10, -1.60 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
