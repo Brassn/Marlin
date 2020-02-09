@@ -1806,7 +1806,7 @@
  */
 #if EXTRUDERS > 1
   // Z raise distance for tool-change, as needed for some extruders
-  #define TOOLCHANGE_ZRAISE     2  // (mm)
+  //#define TOOLCHANGE_ZRAISE     2  // (mm)
   //#define TOOLCHANGE_NO_RETURN   // Never return to the previous position on tool-change
   #if ENABLED(TOOLCHANGE_NO_RETURN)
     //#define EVENT_GCODE_AFTER_TOOLCHANGE "G12X"   // G-code to run after tool-change is complete
@@ -1816,9 +1816,9 @@
   #define TOOLCHANGE_FILAMENT_SWAP
   #if ENABLED(TOOLCHANGE_FILAMENT_SWAP)
     #define TOOLCHANGE_FIL_SWAP_LENGTH          100  // (mm)
-    #define TOOLCHANGE_FIL_EXTRA_PRIME           4  // (mm)
-    #define TOOLCHANGE_FIL_SWAP_RETRACT_SPEED (40*60)  // (mm/m)
-    #define TOOLCHANGE_FIL_SWAP_PRIME_SPEED   (40*60)  // (mm/m)
+    #define TOOLCHANGE_FIL_EXTRA_PRIME           2  // (mm)
+    #define TOOLCHANGE_FIL_SWAP_RETRACT_SPEED (30*60)  // (mm/m)
+    #define TOOLCHANGE_FIL_SWAP_PRIME_SPEED   (20*60)  // (mm/m)
   #endif
 
   /**
@@ -2210,7 +2210,7 @@
    * Use Trinamic's ultra quiet stepping mode.
    * When disabled, Marlin will use spreadCycle stepping mode.
    */
-  #define STEALTHCHOP_XY
+  //#define STEALTHCHOP_XY
   #define STEALTHCHOP_Z
   //#define STEALTHCHOP_E
 
