@@ -58,12 +58,12 @@
 #undef X_CS_PIN
 #undef Y_CS_PIN
 #undef Z_CS_PIN
-#undef E2_CS_PIN
+#undef E1_CS_PIN
 
 #define X_CS_PIN        59
 #define Y_CS_PIN        64
 #define Z_CS_PIN        44
-#define E2_CS_PIN       66
+#define E1_CS_PIN       66
 
 //#undef MAX6675_SS
 //#define MAX6675_SS      57
