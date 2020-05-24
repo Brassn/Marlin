@@ -1001,7 +1001,7 @@
 //#define LCD_TIMEOUT_TO_STATUS 15000
 
 // Add an 'M73' G-code to set the current percentage
-//#define LCD_SET_PROGRESS_MANUALLY
+#define LCD_SET_PROGRESS_MANUALLY
 
 // Show the E position (filament used) during printing
 //#define LCD_SHOW_E_TOTAL
@@ -1839,7 +1839,7 @@
   #endif
 
   // Retract and prime filament on tool-change
-  #define TOOLCHANGE_FILAMENT_SWAP
+  //#define TOOLCHANGE_FILAMENT_SWAP
   #if ENABLED(TOOLCHANGE_FILAMENT_SWAP)
     #define TOOLCHANGE_FIL_SWAP_LENGTH          100  // (mm)
     #define TOOLCHANGE_FIL_EXTRA_PRIME           2  // (mm)
