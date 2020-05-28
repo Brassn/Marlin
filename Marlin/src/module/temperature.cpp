@@ -193,11 +193,13 @@ const char str_t_thermal_runaway[] PROGMEM = STR_T_THERMAL_RUNAWAY,
 
     NOMORE(speed, 255U);
 
-    #if ENABLED(SINGLENOZZLE_STANDBY_FAN)
-      if (target != active_extruder) {
-        if (target < EXTRUDERS) singlenozzle_fan_speed[target] = speed;
-        return;
-      }
+    #if ENABLED(SINGLENOZZLE)
+      #if ENABLED(SINGLENOZZLE_STANDBY_FAN)
+        if (target != active_extruder) {
+          if (target < EXTRUDERS) singlenozzle_fan_speed[target] = speed;
+          return;
+        }
+      #endif
       target = 0; // Always use fan index 0 with SINGLENOZZLE
     #endif
 
